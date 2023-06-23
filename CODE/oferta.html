@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ofertas</title>
+  <script src="script.js"></script>
+  <style>
+    .oferta {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Ofertas</h1>
+  <div id="ofertas">
+    <button onclick="mostrarOfertaAnterior()">&lt; Anterior</button>
+    <span id="indiceOferta"></span>
+    <button onclick="mostrarOfertaSiguiente()">Siguiente &gt;</button>
+    <br>
+    <div class="oferta">
+      <h2 id="tituloOferta"></h2>
+      <p id="descripcionOferta"></p>
+    </div>
+  </div>
+</body>
+</html>
