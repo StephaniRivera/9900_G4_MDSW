@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tienda de productos</title>
+  <script src="script.js"></script>
+</head>
+<body>
+  <h1>Tienda de productos</h1>
+  <button onclick="agregarProducto()">Agregar Producto</button>
+  <button onclick="mostrarCarrito()">Carrito</button>
+
+  <div id="productos"></div>
+
+  <div id="carrito" style="display: none;">
+    <h2>Carrito de Compras</h2>
+    <table>
+      <tr>
+        <th>Producto</th>
+        <th>Precio</th>
+      </tr>
+      <tbody id="carritoProductos"></tbody>
+    </table>
+    <br>
+    <button onclick="comprar()">Comprar</button>
+  </div>
+
+  <div id="comprobante" style="display: none;">
+    <h2>Comprobante de compra</h2>
+    <p id="comprobanteMensaje"></p>
+    <p>Nombre: <span id="nombreUsuario"></span></p>
+    <p>Teléfono: <span id="telefonoUsuario"></span></p>
+    <p>Producto: <span id="productoComprado"></span></p>
+    <p>Precio: $<span id="precioProducto"></span></p>
+    <p>Gracias por tu compra.</p>
+  </div>
+</body>
+</html>
