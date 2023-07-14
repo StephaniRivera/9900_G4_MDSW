@@ -40,6 +40,11 @@ function mostrarCarrito() {
     var producto = productosAgregados[i];
     var productoRow = document.createElement("tr");
 
+    if(var i = 0; i < productosAgregados.length; i++) {
+      promt("Ingreso correcto a la pagina principal") 
+      else {
+        promt("No se pudo entrar a la pgina principal")
+        
     var nombreProductoCell = document.createElement("td");
     nombreProductoCell.innerText = producto.nombre;
     productoRow.appendChild(nombreProductoCell);
