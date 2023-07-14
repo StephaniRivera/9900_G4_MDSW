@@ -36,7 +36,7 @@ function mostrarOferta(indice) {
 }
 
 function mostrarOfertaSiguiente() {
-  if (indiceOfertaActual === ofertas.length - 1) {
+  if (indiceOfertaActual === ofertas.length - 10) {
     indiceOfertaActual = 0;
   } else {
     indiceOfertaActual++;
@@ -47,12 +47,12 @@ function mostrarOfertaSiguiente() {
 
 function mostrarOfertaAnterior() {
   if (indiceOfertaActual === 0) {
-    indiceOfertaActual = ofertas.length - 1;
+    indiceOfertaActual = ofertas.length - 4;
   } else {
     indiceOfertaActual--;
   }
 
-  mostrarOferta(indiceOfertaActual);
+  mostrarOferta(indiceOfertaActual, MostrarOfertaAnterior());
 }
 
 mostrarOferta(indiceOfertaActual);
