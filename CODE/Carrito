@@ -1,0 +1,53 @@
+// Objeto para almacenar los datos del carrito de compras
+const carritoDeCompras = {
+  nombre: "",
+  apellido: "",
+  telefono: "",
+  correo: "",
+  items: []
+};
+
+// Función para agregar un producto al carrito
+function agregarProductoAlCarrito(nombreProducto, precio) {
+  const producto = { nombre: nombreProducto, precio: precio };
+  carritoDeCompras.items.push(producto);
+}
+
+// Función para mostrar el contenido del carrito de compras
+function mostrarCarritoDeCompras() {
+  console.log("Carrito de Compras:");
+  console.log("Nombre: " + carritoDeCompras.nombre + " " + carritoDeCompras.apellido);
+  console.log("Teléfono: " + carritoDeCompras.telefono);
+  console.log("Correo: " + carritoDeCompras.correo);
+  console.log("Productos:");
+
+  carritoDeCompras.items.forEach((producto, index) => {
+    console.log(index + 1 + ". " + producto.nombre + " - $" + producto.precio);
+  });
+}
+
+// Ejemplo de uso:
+carritoDeCompras.nombre = "Juan";
+carritoDeCompras.apellido = "Pérez";
+carritoDeCompras.telefono = "1234567890";
+carritoDeCompras.correo = "juan@example.com";
+
+agregarProductoAlCarrito("Camiseta", 20);
+agregarProductoAlCarrito("Pantalón", 30);
+agregarProductoAlCarrito("Zapatos", 50);
+
+mostrarCarritoDeCompras();
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Carrito de Compras</title>
+</head>
+<body>
+    <h1>Carrito de Compras</h1>
+    <form id="checkoutForm">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required><br>
+
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" required><br>
+
