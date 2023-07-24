@@ -27,6 +27,28 @@ function actualizarProductos() {
     productosDiv.appendChild(productoHTML);
   }
 }
+// Creamos un array para almacenar los productos
+var listaProductos = [];
+
+// Definimos la cantidad de productos que queremos agregar (por ejemplo, 3 productos)
+var cantidadProductos = 3;
+
+// Ciclo for para agregar los productos a la lista
+for (var i = 0; i < cantidadProductos; i++) {
+  var nombreProducto = prompt("Ingrese el nombre del producto " + (i + 1) + ":");
+  var precioProducto = parseFloat(prompt("Ingrese el precio del producto " + (i + 1) + ":"));
+
+  var producto = {
+    nombre: nombreProducto,
+    precio: precioProducto
+  };
+
+  listaProductos.push(producto);
+}
+
+// Mostramos los productos almacenados en la lista
+console.log("Lista de productos:");
+console.log(listaProductos);
 
 // Función para mostrar el carrito de compras
 function mostrarCarrito() {
